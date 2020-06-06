@@ -71,7 +71,7 @@ In this tutorial we will see how to generate those keys and the certificate and 
             --topology ... \
             --database-path ... \
             --socket-path ... \
-            --port ...
+            --port ... \
             --config ... \
             --shelley-kes-key kes001.skey \
             --shelley-vrf-key vrf.skey \
