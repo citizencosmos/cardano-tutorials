@@ -73,13 +73,13 @@ With this information we can generate our opertional certificate:
     cardano-cli shelley node issue-op-cert \
     --kes-verification-key-file kes.vkey \
     --cold-signing-key-file cold.skey \
-    --operational-certificate-issue-counter coldcounter \
+    --operational-certificate-issue-counter cold.counter \ # or node.counter?
     --kes-period 120 \
     --out-file node001.cert
 
 
    This will create a certificate and save it to file `node001.cert`.
-   It will update the "serial number" saved in the previously generated `node.counter`,
+   It will update the "serial number" saved in the previously generated `node.counter`, or `cold.counter` 
    and it will link our secure "cold" key to the operational "hot" KES key.
 
 5. After all this work, we can move the KES- and VRF- keys and the certificate to the computer running our node and start the node as follows:
